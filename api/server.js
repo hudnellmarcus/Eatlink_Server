@@ -12,8 +12,13 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
+const corsOptions = {
+    origin: 'http://localhost:5173', // URL of your frontend
+    optionsSuccessStatus: 200
+};
+
 app.use(bodyparser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(morgan('tiny'));
 
 app.get('/api/get-recipe', (req, res) => {
