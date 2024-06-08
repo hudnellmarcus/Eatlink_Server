@@ -23,7 +23,7 @@ app.get('/api/get-recipe', (req, res) => {
 app.post('/api/get-recipe', async (req, res) => {
     const { diet } = req.body;
     console.log(diet)
-    const prompt = `Provide a ${diet} recipe in JSON format with keys of name, servings, ingredients array with quantity,measurement, and instruction (i.e. chopped, diced, etc.) and instructions string array.`;
+    const prompt = `Provide a ${diet} recipe in JSON format with keys of name, servings, ingredients array with quantity,measurement, and instruction (i.e. chopped, diced, etc.) and instructions string array. Also include a common image URL of the dish that is known to be valid and publicly accessible`;
 
     try {
         const response = await openai.chat.completions.create({
