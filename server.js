@@ -55,10 +55,10 @@ app.post('/api/get-recipe', async (req, res) => {
 
 
 
-// const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
-// app.listen(port, () => {
-//     console.log(`Server is listening to Andre ${port}`)
-// }); 
+app.listen(port, () => {
+    console.log(`Server is listening to Andre ${port}`)
+}); 
 
 export default app; 
