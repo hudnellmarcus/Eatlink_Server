@@ -13,7 +13,7 @@ const openai = new OpenAI({
 });
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // URL of your frontend
+    origin: 'https://eatlink.onrender.com/', // URL of your frontend
     optionsSuccessStatus: 200
 };
 
